@@ -70,7 +70,6 @@ class Animales
      */
     private $pedigri;
 
-
     /**
      * Get id
      *

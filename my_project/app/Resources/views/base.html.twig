@@ -1,13 +1,135 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
+<html lang="en">
+<!-- 
+.hidden-xs
+Si aplicamos esta clase CSS a un DIV no aparecerá en la versión móvil pero si desde un ordenador o tablet.
+
+.visible-xs
+Si aplicamos esta clase CSS a un DIV sí aparecerá en la versión móvil pero no desde una dispositivo con la pantalla mayor.
+-->
+  <head>
+  <style>
+		  .btnJ{
+		   -webkit-border-radius: 35;
+		  -moz-border-radius: 35;
+		  border-radius: 35px;
+		  color: #ffffff;
+		  font-size: 20px;
+		  background: #00BCD4;
+		  padding: 10px 20px 10px 20px;
+		  border: solid #1f628d 0px;
+		  text-decoration: none;
+		}
+
+
+		.btnJ:hover {
+		  text-decoration: none;
+		}
+
+		.navbar-nav.nav-justified > li{
+    float:none;
+}
+
+
+  </style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- menu redondo-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="../../bundles/animales/css/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="../../bundles/animales/css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="../../bundles/animales/css/component1.css"/>
+		
+		<script src="../../bundles/animales/js/modernizr-2.6.2.min.js"></script>
+	<!-- fin menu redondo -->
+    <title>Pet’s, adoptalo y no compres</title>
+
+    <meta name="description" content="Pets page">
+    <meta name="author" content="Pets">
+
+
+    <link href="../../bundles/animales/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../bundles/animales/css/style.css" rel="stylesheet">
+
+  </head>
+  <body>
+  	<!-- menu redondo-->
+  	<div class="component">
+				<!-- Start Nav Structure -->
+				<button class="cn-button" id="cn-button">+</button>
+				<div class="cn-wrapper" id="cn-wrapper" style="margin-bottom: 10px"> <!-- mover posicion de los botones del menu -->
+				    <ul>
+				      <li><a href="#"><img src="../../bundles/animales/imgs/iconsMenu/camada.png" width="45px"></a></li>
+				      <li><a href="#"><img src="../../bundles/animales//imgs/iconsMenu/adoptar.png" width="45px"></span></a></li>
+				      <li><a href="#"><img src="../../bundles/animales//imgs/iconsMenu/home.png" width="40px"></a></li>
+				      <li><a href="#"><img src="../../bundles/animales//imgs/iconsMenu/buscar.png" width="30px"></a></li>
+				       <li><a href="#"><img src="../../bundles/animales//imgs/iconsMenu/donar.png" width="45px"></a></li>
+
+
+
+				     </ul>
+				</div>
+				<div id="cn-overlay" class="cn-overlay"></div>
+				<!-- End Nav Structure -->
+	</div>
+	<!-- fin menu redondo-->
+    <div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="height:95px;">
+				<div class="navbar-header" >
+					<a href="publicar.html">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" style="border:0;">
+						<img src="../../bundles/animales/imgs/publicar.png" class="visible-xs">
+						</button>
+					</a> 
+					<a class="navbar-brand" href="#"><img src="../../bundles/animales/imgs/logo.png" width="160px"></a>
+				</div>
+				<ul class="nav navbar-nav nav-justified hidden-xs" role="menu">
+ 					<li><a href="publicar.html">
+							<button type="submit" class="btn btn-default hidden-xs" style="border: 0px;border-radius: 27px 27px 27px 27px;
+							-moz-border-radius: 27px 27px 27px 27px;
+							-webkit-border-radius: 27px 27px 27px 27px; margin-top: -55px;">
+							<img src="../../bundles/animales/imgs/publicar.png"/>&nbsp;&nbsp;&nbsp;Publicar anuncio
+							</button>
+						
+						</a>
+ 				</ul>
+								<!--
+				<form class="navbar-right" style="margin-top:10px;">
+					<a href="publicar.html">
+							<button type="submit" class="btn btn-default hidden-xs" style="border: 0px;border-radius: 27px 27px 27px 27px;
+							-moz-border-radius: 27px 27px 27px 27px;
+							-webkit-border-radius: 27px 27px 27px 27px; margin-right:390px;">
+							<img src="imgs/publicar.png"/>&nbsp;&nbsp;&nbsp;Publicar anuncio
+							</button>
+						
+						</a>
+				</form>-->
+		
+			</nav>
+			<div class="jumbotron" style="margin-top: 170px; margin-bottom: 50px;">
+				        {% block body %}{% endblock %}
+                        {% block javascripts %}{% endblock %}
+			</div>
+		</div>
+	</div>
+	
+</div>
+<div id="footer" style="position: fixed; bottom: 0; width: 100%; height: 40px; background-color: #00BCD4;text-align: right; line-height: 40px;">
+      <div class="container" >
+        <p class="text-muted credit" ><font color="#FFFFFF">Pet's | Copyright © 2016 - 2017</font></p>
+
+      </div>
+    </div>
+
+    <script src="../../bundles/animales/js/jquery.min.js"></script>
+    <script src="../../bundles/animales/js/bootstrap.min.js"></script>
+    <script src="../../bundles/animales/js/scripts.js"></script>
+    	<!-- menu redondo-->
+		<script src="../../bundles/animales/js/polyfills.js"></script>
+		<script src="../../bundles/animales/js/demo1.js"></script>
+		<!-- fin menu redondo -->   
+  </body>
 </html>
+        
