@@ -1,0 +1,12 @@
+animales:
+    resource: "@AnimalesBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+app:
+    resource: "@AppBundle/Controller/"
+    type:     annotation
+    
+animales_animales:
+    resource: "@AnimalesBundle/Resources/config/routing/animales.yml"
+    prefix:   /animales
