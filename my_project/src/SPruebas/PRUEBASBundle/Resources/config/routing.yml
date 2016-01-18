@@ -1,0 +1,7 @@
+formulario:
+    path:     /form
+    defaults: { _controller: SPruebasPRUEBASBundle:Default:form }
+    
+s_pruebas_pruebas_homepage:
+    path:     /
+    defaults: { _controller: SPruebasPRUEBASBundle:Default:index }
