@@ -114,6 +114,68 @@ class appDevUrlMatcher extends Symfony\Bundle\FrameworkBundle\Routing\Redirectab
             return array (  '_controller' => 'AnunciosBundle\\Controller\\DefaultController::indexAction',  '_route' => 'anuncios_homepage',);
         }
 
+        if (0 === strpos($pathinfo, '/propietario')) {
+            // propietario_index
+            if (rtrim($pathinfo, '/') === '/propietario') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_propietario_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'propietario_index');
+                }
+
+                return array (  '_controller' => 'PropietarioBundle\\Controller\\PropietarioController::indexAction',  '_route' => 'propietario_index',);
+            }
+            not_propietario_index:
+
+            // propietario_show
+            if (preg_match('#^/propietario/(?P<id>[^/]++)/show$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_propietario_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'propietario_show')), array (  '_controller' => 'PropietarioBundle\\Controller\\PropietarioController::showAction',));
+            }
+            not_propietario_show:
+
+            // propietario_new
+            if ($pathinfo === '/propietario/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_propietario_new;
+                }
+
+                return array (  '_controller' => 'PropietarioBundle\\Controller\\PropietarioController::newAction',  '_route' => 'propietario_new',);
+            }
+            not_propietario_new:
+
+            // propietario_edit
+            if (preg_match('#^/propietario/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_propietario_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'propietario_edit')), array (  '_controller' => 'PropietarioBundle\\Controller\\PropietarioController::editAction',));
+            }
+            not_propietario_edit:
+
+            // propietario_delete
+            if (preg_match('#^/propietario/(?P<id>[^/]++)/delete$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_propietario_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'propietario_delete')), array (  '_controller' => 'PropietarioBundle\\Controller\\PropietarioController::deleteAction',));
+            }
+            not_propietario_delete:
+
+        }
+
         // propietario_homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {

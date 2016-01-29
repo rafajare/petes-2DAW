@@ -1,13 +1,70 @@
 {% extends 'base.html.twig' %}
-
 {% block body %}
     <h1>Publicar Anuncio</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type="submit" value="Create" />
-    {{ form_end(form) }}
+                <table align="left">
+                      <tr>
+                      <th>Nombre del animal:</th>
+                      <th></th>
+                      <th>{{form_row(form.nombre) }}</th>
+                      </tr>
+                      
+                     <tr>
+                      <th>Tipo de animal:</th>
+                      <th></th>
+                      <th>{{form_row(form.tipo) }}</th>
+                     </tr>
+                      
+                      <tr>
+                      <th>Raza:</th>
+                      <th></th>
+                      <th>{{form_row(form.raza) }}</th>
+                      </tr>
+                      
+                      <tr>
+                      <th>Sexo:</th>
+                      <th></th>
+                      <th>{{form_row(form.sexo) }}</th>
+                      </tr>
+                      
+                      <tr>
+                      <th>Fecha de nacimiento (aproximada):</th>
+                      <th></th>
+                      <th>{{form_row(form.nacimiento) }}</th>
+                      </tr>
+                      
+                      <tr>
+                      <th>Nombre del propietario:</th>
+                      <th></th>
+                      <th>{{form_row(form.propietario) }}</th>
+                      </tr>
+                      
+                      <tr>
+                      <th>Pedigri:</th>
+                      <th>{{form_row(form.pedigri) }}</th>
+                      </tr>
+            </table>
+            
+            <table>
+                      
+                      <tr>
+                      <th>Titulo: <input type="text" class="anuncio" size="32"><br>
+                      <textarea class="anuncio" rows="10" cols="40" >Escribe aquí tu anuncio</textarea></th>
+                      </tr>
+                      
+                      
+                      <tr>
+                          <th><input id="botonPublicar" class="btn btn-info" type="submit" value="Publicar" style='width:340px; height:25px'/></th>
+                      </tr>
+                      
+            </table>
+           
 
+    {{ form_end(form) }}
+    
+
+    
     <ul>
         <li>
             <a href="{{ path('animales_index') }}">Volver a la lista</a>

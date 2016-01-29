@@ -17,8 +17,8 @@ class __TwigTemplate_9d3f89b4b876caf4ddd27b5fff24002962d13d42c14ee824a6499a14963
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_6525ecb5ce8ba2fa72d875e9a12004c5984a5f783402563b05647fbea855967b = $this->env->getExtension("native_profiler");
-        $__internal_6525ecb5ce8ba2fa72d875e9a12004c5984a5f783402563b05647fbea855967b->enter($__internal_6525ecb5ce8ba2fa72d875e9a12004c5984a5f783402563b05647fbea855967b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_fff5f3ffa9c267596b7fdb93284c63e8e77eb1680e4611d84e8d7348ec3f3024 = $this->env->getExtension("native_profiler");
+        $__internal_fff5f3ffa9c267596b7fdb93284c63e8e77eb1680e4611d84e8d7348ec3f3024->enter($__internal_fff5f3ffa9c267596b7fdb93284c63e8e77eb1680e4611d84e8d7348ec3f3024_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -53,6 +53,11 @@ Si aplicamos esta clase CSS a un DIV sí aparecerá en la versión móvil pero n
     float:none;
 }
 
+
+
+#botonPublicar{
+\t\tpadding:2px;
+}
 
   </style>
     <meta charset=\"utf-8\">
@@ -119,15 +124,19 @@ Si aplicamos esta clase CSS a un DIV sí aparecerá en la versión móvil pero n
 \t\t\t\t\t\t</a>
  \t\t\t\t</ul>
 \t\t\t</nav>
-\t\t\t<div class=\"jumbotron\" style=\"margin-top: 170px; margin-bottom: 50px;\">
+\t\t\t<center>
+\t\t\t<div class=\"jumbotron\" style=\"margin-top: 170px; margin-bottom: 50px; width:90%;\">
+\t
 \t\t\t\t        ";
-        // line 100
+        // line 107
         $this->displayBlock('body', $context, $blocks);
-        // line 101
+        // line 108
         echo "                        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 102
-        echo "\t\t\t</div>
+        // line 109
+        echo "                      
+\t\t\t</div>
+\t\t\t</center>
 \t\t</div>
 \t</div>
 \t
@@ -149,29 +158,29 @@ Si aplicamos esta clase CSS a un DIV sí aparecerá en la versión móvil pero n
   </body>
 </html>";
         
-        $__internal_6525ecb5ce8ba2fa72d875e9a12004c5984a5f783402563b05647fbea855967b->leave($__internal_6525ecb5ce8ba2fa72d875e9a12004c5984a5f783402563b05647fbea855967b_prof);
+        $__internal_fff5f3ffa9c267596b7fdb93284c63e8e77eb1680e4611d84e8d7348ec3f3024->leave($__internal_fff5f3ffa9c267596b7fdb93284c63e8e77eb1680e4611d84e8d7348ec3f3024_prof);
 
     }
 
-    // line 100
+    // line 107
     public function block_body($context, array $blocks = array())
     {
-        $__internal_f15ea4173f61788b6db6ccc431ceaa0bc61c45e59371fb2149e1bb8f543f0cf4 = $this->env->getExtension("native_profiler");
-        $__internal_f15ea4173f61788b6db6ccc431ceaa0bc61c45e59371fb2149e1bb8f543f0cf4->enter($__internal_f15ea4173f61788b6db6ccc431ceaa0bc61c45e59371fb2149e1bb8f543f0cf4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b03cca67e4413aaebaf02051f621a276d01de9b8826961e8c20c5456473b11e8 = $this->env->getExtension("native_profiler");
+        $__internal_b03cca67e4413aaebaf02051f621a276d01de9b8826961e8c20c5456473b11e8->enter($__internal_b03cca67e4413aaebaf02051f621a276d01de9b8826961e8c20c5456473b11e8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_f15ea4173f61788b6db6ccc431ceaa0bc61c45e59371fb2149e1bb8f543f0cf4->leave($__internal_f15ea4173f61788b6db6ccc431ceaa0bc61c45e59371fb2149e1bb8f543f0cf4_prof);
+        $__internal_b03cca67e4413aaebaf02051f621a276d01de9b8826961e8c20c5456473b11e8->leave($__internal_b03cca67e4413aaebaf02051f621a276d01de9b8826961e8c20c5456473b11e8_prof);
 
     }
 
-    // line 101
+    // line 108
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_03f86ab46d1b30a3be27e294e12e291da3fc67f9ea20d12f1937ba6525578eed = $this->env->getExtension("native_profiler");
-        $__internal_03f86ab46d1b30a3be27e294e12e291da3fc67f9ea20d12f1937ba6525578eed->enter($__internal_03f86ab46d1b30a3be27e294e12e291da3fc67f9ea20d12f1937ba6525578eed_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_449804d11d5bd8710ef9dbf27ab3995e9162269fab167d7f119b679fa1ac190d = $this->env->getExtension("native_profiler");
+        $__internal_449804d11d5bd8710ef9dbf27ab3995e9162269fab167d7f119b679fa1ac190d->enter($__internal_449804d11d5bd8710ef9dbf27ab3995e9162269fab167d7f119b679fa1ac190d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         
-        $__internal_03f86ab46d1b30a3be27e294e12e291da3fc67f9ea20d12f1937ba6525578eed->leave($__internal_03f86ab46d1b30a3be27e294e12e291da3fc67f9ea20d12f1937ba6525578eed_prof);
+        $__internal_449804d11d5bd8710ef9dbf27ab3995e9162269fab167d7f119b679fa1ac190d->leave($__internal_449804d11d5bd8710ef9dbf27ab3995e9162269fab167d7f119b679fa1ac190d_prof);
 
     }
 
@@ -182,7 +191,7 @@ Si aplicamos esta clase CSS a un DIV sí aparecerá en la versión móvil pero n
 
     public function getDebugInfo()
     {
-        return array (  168 => 101,  157 => 100,  130 => 102,  127 => 101,  125 => 100,  24 => 1,);
+        return array (  177 => 108,  166 => 107,  137 => 109,  134 => 108,  132 => 107,  24 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -217,6 +226,11 @@ Si aplicamos esta clase CSS a un DIV sí aparecerá en la versión móvil pero n
 /*     float:none;*/
 /* }*/
 /* */
+/* */
+/* */
+/* #botonPublicar{*/
+/* 		padding:2px;*/
+/* }*/
 /* */
 /*   </style>*/
 /*     <meta charset="utf-8">*/
@@ -283,10 +297,14 @@ Si aplicamos esta clase CSS a un DIV sí aparecerá en la versión móvil pero n
 /* 						</a>*/
 /*  				</ul>*/
 /* 			</nav>*/
-/* 			<div class="jumbotron" style="margin-top: 170px; margin-bottom: 50px;">*/
+/* 			<center>*/
+/* 			<div class="jumbotron" style="margin-top: 170px; margin-bottom: 50px; width:90%;">*/
+/* 	*/
 /* 				        {% block body %}{% endblock %}*/
 /*                         {% block javascripts %}{% endblock %}*/
+/*                       */
 /* 			</div>*/
+/* 			</center>*/
 /* 		</div>*/
 /* 	</div>*/
 /* 	*/

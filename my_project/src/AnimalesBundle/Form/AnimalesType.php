@@ -15,13 +15,13 @@ class AnimalesType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('nombre')
-            ->add('tipo')
-            ->add('raza')
-            ->add('sexo')
-            ->add('nacimiento', 'date')
-            ->add('propietario')
-            ->add('pedigri')
+            ->add('nombre','text',array('label'=>' '))
+            ->add('tipo','text',array('label'=>' '))
+            ->add('raza','text',array('label'=>' '))
+            ->add('sexo','text',array('label'=>' '))
+            ->add('nacimiento','date',array('label'=>' ','years'=>range(date('Y')-50,date('Y'))))
+            ->add('propietario','text',array('label'=>' '))
+            ->add('pedigri','checkbox',array('label'=>' '))
         ;
     }
     

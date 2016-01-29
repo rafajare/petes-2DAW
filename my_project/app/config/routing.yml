@@ -10,6 +10,11 @@ animales:
     resource: "@AnimalesBundle/Controller/"
     type:     annotation
     prefix:   /
+    
+propietario:
+    resource: "@PropietarioBundle/Controller/"
+    type:     annotation
+    prefix:   /
 
 app:
     resource: "@AppBundle/Controller/"
